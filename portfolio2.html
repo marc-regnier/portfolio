@@ -23,11 +23,11 @@
     <title>Mon Portfolio</title>
 </head>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="60">
+<body>
     <!--header + navbar-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">MR</a>
+            <a class="navbar-brand" href="#home">MR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,44 +56,77 @@
         </nav>
     </header>
 
+    <!--Home-->
+    <section id="home">
+        <article class="title">
+            <h1>REGNIER Marc</h1>
+            <h2>Développeur Web Junior</h2>
+            <h3>Bienvenue sur mon site</h3>
+        </article>
+
+    </section>
+
+
     <!--SECTION ABOUT-->
     <section id="about" class="container-fluid">
-        <div class="background">
+        <div class="imageCod">
         </div>
-        <div class="mobile card card-cascade">
+        <div class="phone">
+            <div class="white-divider"></div>
+            <div class="heading">
+                <h1>A propos</h1>
+            </div>
+            <div class="center">
+                <div class="mobile card card-cascade">
+                    <div class="mobileScroll">
+                        <!-- Card image -->
+                        <div class="view view-cascade overlay">
+                            <div class="iconBar">
+                                <ul class="icon">
+                                    <li><i class="far fa-bell"></i></li>
+                                    <li><i class="fas fa-wifi"></i></li>
+                                    <li><i class="fas fa-battery-three-quarters"></i></li>
+                                    <li>85%</li>
+                                    <li>14:03</li>
+                                </ul>
 
-            <!-- Card image -->
-            <div class="view view-cascade overlay">
-              <img class="card-img-top" src="image/aa.jpg" alt="marc">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
+                            </div>
+                            <img class="card-img-top" src="image/aa.jpg" alt="marc">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body card-body-cascade text-center">
+
+                            <!-- Title -->
+                            <h4 class="card-title"><strong>REGNIER Marc</strong></h4>
+                            <!-- Subtitle -->
+                            <h6 class="font-weight-bold indigo-text py-2">Développeur web Junior</h6>
+                            <!-- Text -->
+                            <p class="card-text">
+                                Je m'appelle REGNIER Marc, j'ai 31 ans et je suis un passionné d'informatique notamment
+                                dans
+                                le
+                                développement Web qui est un domaine trés intéressant.
+                            </p>
+
+                            <!-- Facebook -->
+                            <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
+                            <!-- Twitter -->
+                            <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
+                            <!-- Google + -->
+                            <a type="button" class="btn-floating btn-small btn-dribbble"><i
+                                    class="fab fa-dribbble"></i></a>
+                            <a href="CV.pdf" class="btn btn-danger button">Voir mon CV</a>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-          
-            <!-- Card content -->
-            <div class="card-body card-body-cascade text-center">
-          
-              <!-- Title -->
-              <h4 class="card-title"><strong>REGNIER Marc</strong></h4>
-              <!-- Subtitle -->
-              <h6 class="font-weight-bold indigo-text py-2">Développeur web Junior</h6>
-              <!-- Text -->
-              <p class="card-text">
-                  Je m'appelle REGNIER Marc, j'ai 31 ans et je suis un passionné d'informatique notamment dans le développement Web qui est un domaine trés intéressant.
-              </p>
-          
-              <!-- Facebook -->
-              <a type="button" class="btn-floating btn-small btn-fb"><i class="fab fa-facebook-f"></i></a>
-              <!-- Twitter -->
-              <a type="button" class="btn-floating btn-small btn-tw"><i class="fab fa-twitter"></i></a>
-              <!-- Google + -->
-              <a type="button" class="btn-floating btn-small btn-dribbble"><i class="fab fa-dribbble"></i></a>
-              <a href="CV.pdf" class="btn btn-danger button">Telecharger mon CV</a>
-          
-            </div>
-          
-          </div>
-          <!-- Card Regular -->
+        </div>
+        <!-- Card Regular -->
     </section>
 
     <!--SECTION SKILLS-->

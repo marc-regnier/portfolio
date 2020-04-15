@@ -2,6 +2,7 @@
 
 body{
     font-family: sans-serif;
+    padding-top: 70px;
 }
 
 h1,h2,h3,h4,h5{
@@ -29,31 +30,98 @@ section .heading{
     height: 70px;
 }
 
-/* ABOUT */
-
-#about{
-    padding-top: 100px;
-    background: #d82c2e;
+/*HOME*/
+#home{
     background-image: url("image/computer-2982270_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    height: 950px;
 
+}
+
+.title{
+    text-align: center;
+    color: #fff;
     
 }
 
+
+/* ABOUT */
+
+#about{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.imageCod{
+    width: 50%;
+    background-image: url('image/coding.jpg');
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
 .mobile {
-    display: inline-block;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
     margin: 15px;
     min-height: 500px;
     background-color: #ffff;
     border: 50px solid #000;
-    border-width: 70px 7px 30px 7px;
+    border-width: 70px 7px 40px 7px;
     border-radius: 15px;
     box-shadow: 1px 1px 0 #353535, 2px 2px 0 #353535, 3px 3px 0 #353535, 4px 4px 0 #353535, 5px 5px 0 #353535, 10px 10px 5px rgba(0, 0, 0, 0.4);
     position: relative;
-    overflow: scroll;
     color: #000;
+    overflow: hidden;
+    position: relative;
+    
   }
+
+.mobileScroll{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -20px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.phone{
+    width: 50%;
+    background: #d82c2e;
+    padding-top: 50px;
+}
+
+.iconBar{
+    position: absolute;
+    color: #fff;
+    
+  }
+
+.icon{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon li{
+    margin-top: 5px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
   
 .card1{
     height: 550px;
@@ -63,10 +131,6 @@ section .heading{
     
 }
 
-.background{
-    
-    width: 50%
-}
 
 .picture{
     height: 350px;
@@ -96,7 +160,9 @@ section .heading{
     margin-top: 28px;
     padding: 18px 50px;
     box-shadow: 1px 1px 10px black;
-    width: auto;
+    width: 150px;
+    height: auto;
+    font-size: 12px;
 }
 
 /* NAVBAR*/
