@@ -69,22 +69,30 @@ section .heading{
 
 .mobile {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    text-align: justify;
+    display: inline-block;
+    text-align: center;
     margin: 15px;
-    min-height: 500px;
+    min-height: 400px;
     background-color: #ffff;
     border: 50px solid #000;
     border-width: 70px 7px 40px 7px;
     border-radius: 15px;
-    box-shadow: 1px 1px 0 #353535, 2px 2px 0 #353535, 3px 3px 0 #353535, 4px 4px 0 #353535, 5px 5px 0 #353535, 10px 10px 5px rgba(0, 0, 0, 0.4);
-    position: relative;
-    color: #000;
+    box-shadow: 1px 1px 0 #353535, 2px 2px 0 #353535, 3px 3px 0 #353535, 4px 4px 0 #353535, 5px 5px 0 #353535, 10px 10px 5px rgba(0, 0, 0, 0.4);  
     overflow: hidden;
-    position: relative;
     
   }
+
+.headphone{
+    margin: auto;
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 5px;
+    margin-top: 50px;
+    position: absolute;
+
+}
 
 .mobileScroll{
     position: absolute;
@@ -95,6 +103,7 @@ section .heading{
     overflow: auto;
     overflow-x: hidden;
 }
+
 
 .phone{
     width: 50%;
@@ -121,6 +130,28 @@ section .heading{
     justify-content: space-around;
 }
 
+.buttonPhone{
+  display: inline-block;
+  margin-top:430px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+  position: absolute;
+}
+
+.carre{
+    border: 2px solid #000;
+    margin-top: 8px;
+    width: 15px;
+    height: 15px;
+    margin-left: 8px;
+}
+
+.iconContact{
+    display: flex;
+    flex-direction: column;
+}
 
   
 .card1{
