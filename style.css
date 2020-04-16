@@ -2,7 +2,7 @@
 
 body {
     font-family: sans-serif;
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 h1,
@@ -30,20 +30,20 @@ section .heading {
     padding-top: 30px;
 }
 
-.navbar {
-    height: 70px;
-}
 
 /*HOME*/
 #home {
-    background-image: url("image/computer-2982270_1920.jpg");
-    background-size: cover;
+    background-image: url("image/laptop.jpg");
+    min-height: 900px;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 950px;
+    background-size: cover;
 
 }
 
 .title {
+    margin-top: 150px;
     text-align: center;
     color: #fff;
 
@@ -53,6 +53,7 @@ section .heading {
 /* ABOUT */
 
 #about {
+
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -61,7 +62,6 @@ section .heading {
 
 .imageCod {
     width: 50%;
-    background-image: url('image/coding.jpg');
 }
 
 .center {
@@ -373,6 +373,17 @@ li a:hover {
     margin: 0 auto;
 }
 
+/*PARALLAX*/
+
+#parallax {
+    background-image: url('image/pc.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 
 
 
@@ -485,10 +496,18 @@ footer i:hover {
     #about {
         display: flex;
         flex-direction: column;
-       
     }
 
-   
+    .imageCod {
+        width: 100%;
+
+    }
+
+    .phone {
+        width: 100%;
+    }
+
+
 
     /*TIMELINE*/
     ul.timeline:before {
