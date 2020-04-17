@@ -20,13 +20,14 @@
     <link rel="stylesheet" href="fontawesome-free-5.12.1-web\css\all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="portfolio2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtb9rbFRWltZ_oxlcpuWo37Eu6kMEboLI"></script>
     <title>Mon Portfolio</title>
 </head>
 
 <body>
     <!--header + navbar-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#home">MR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-label="Toggle navigation">
@@ -43,7 +44,7 @@
                         <a class="nav-link" href="#skill">Compétences</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#experience">Experiences</a>
+                        <a class="nav-link" href="#experience">Expériences</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#portfolio">Projets</a>
@@ -58,10 +59,8 @@
 
     <!--Home-->
     <section id="home">
-        <article class="title">
-            <h1>REGNIER Marc</h1>
-            <h2>Développeur Web Junior</h2>
-            <h3>Bienvenue sur mon site</h3>
+        <article class="middle title" data-text="REGNIER Marc Développeur Web Junior">
+            REGNIER Marc Développeur Web Junior
         </article>
 
     </section>
@@ -370,7 +369,7 @@
             <div class="heading">
                 <h2>Contact</h2>
             </div>
-            <div class="row justify-content-center">
+            <div class="row formulaire justify-content-center">
                 <div class="col-lg-10 col-lg-offset-1 d-flex justify-content-center">
                     <form action="contact.php" method="POST" role="form" id="contact-form">
 
@@ -422,6 +421,10 @@
                     </form>
                 </div>
             </div>
+            
+        </div>
+        <div id="map">
+
         </div>
 
 

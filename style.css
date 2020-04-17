@@ -1,9 +1,20 @@
 /* general */
 
+@font-face {
+    font-family: 'cascadia_coderegular';
+    src: url('font/cascadia-webfont.woff2') format('woff2'),
+         url('font/cascadia-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'cascadia_coderegular', Arial, Helvetica, sans-serif;
     padding-top: 50px;
 }
+
+
 
 h1,
 h2,
@@ -34,7 +45,7 @@ section .heading {
 /*HOME*/
 #home {
     background-image: url("image/laptop.jpg");
-    min-height: 900px;
+    min-height: 800px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,11 +53,71 @@ section .heading {
 
 }
 
-.title {
-    margin-top: 150px;
+.middle{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.title{
     text-align: center;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    
 
+}
+
+.title::before,.title::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.title::before{
+    color: #ff00c1;
+    animation: glitch-effect 3s infinite;
+}
+
+.title::before{
+    color: #3498db;
+    animation: glitch-effect 2s infinite;
+}
+
+@keyframes glitch-effect{
+    0%{
+        left: -2px;
+        top: -2px;
+
+    }
+    25%{
+        left: 2px;
+        top: 0px;
+
+    }
+    50%{
+        left: -1px;
+        top: 2px;
+
+    }
+    75%{
+        left: 1px;
+        top: -1px;
+
+    }
+    100%{
+        left: 0px;
+        top: -2px;
+
+    }
 }
 
 
@@ -206,10 +277,29 @@ section .heading {
     margin-left: 150px;
 }
 
-li a:hover {
-    background-color: #111;
-    border: 1px solid white;
+.navbar-nav li a{
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    overflow: hidden;
+    transition: 0.7s all;
+    text-transform: uppercase;
+    
+}
 
+.navbar-nav li a:before{
+    content:" ";
+    width: 60px;
+    position: absolute;
+    border-bottom: 8px solid #313131;
+    bottom: 0;
+    right: 350px;
+    transition: 0.7s all;
+}
+
+.navbar-nav li a:hover:before{
+    right: 0;
 }
 
 /* SKILLS */
@@ -476,6 +566,8 @@ footer i:hover {
 
 /*CONTACT*/
 
+
+
 #contact .heading h2 {
     color: #d82c2e;
 }
@@ -485,6 +577,14 @@ footer i:hover {
     background: #fff;
     padding: 40px;
     border-radius: 15px;
+}
+
+
+/*MAP*/
+
+#map{
+    height: 400px;
+    width: 100%;
 }
 
 

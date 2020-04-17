@@ -13,6 +13,7 @@ $(function(){
 
 });
 
+//CONTACT
 $(function(){
 
     $('#contact-form').submit(function(e)
@@ -49,5 +50,14 @@ $(function(){
         });
 
     });
+
+});
+
+$(function(){
+    var location = {lat: 49.2833, lng: 6.2};
+
+    var map = new google.maps.Map(document.getElementById('map'), {zoom: 12, center: location});
+    var marker = new google.maps.Marker({position:location, map: map});
+
 
 });
