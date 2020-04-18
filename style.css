@@ -315,6 +315,7 @@ section .heading {
 .card {
     height: 450px;
     width: 250px;
+    box-shadow: 20px 30px 60px 0 rgba(0,0,0,0.3);
 }
 
 .btn-floating i {
@@ -487,6 +488,11 @@ section .heading {
     color: #fff;
 }
 
+#portfolio p{
+    text-align: center;
+    color: #fff;
+}
+
 
 #portfolio .thumbnail img {
 
@@ -503,45 +509,7 @@ section .heading {
 }
 
 
-/*CAROUSEL SLIDE*/
 
-#pictures_work {
-    background: #fff;
-
-}
-
-#pictures_work .heading h2 {
-    color: #d82c2e;
-}
-
-.carousel-control-prev.left,
-.carousel-control-next.right {
-    font-size: 45px;
-    background-image: none;
-    color: #d82c2e;
-}
-
-
-
-.carousel-indicators li {
-    background-color: #d82c2e;
-
-}
-
-.carousel-indicators li.active {
-    background-color: #d82c2e;
-}
-
-
-#myCarousel .carousel-item {
-    padding: 48px 38px;
-}
-
-
-#myCarousel .carousel-item {
-    color: #d82c2e;
-    font-style: italic;
-}
 
 
 
@@ -566,7 +534,10 @@ footer i:hover {
 
 /*CONTACT*/
 
-
+#contact{
+    display: flex;
+    flex-direction: row;
+}
 
 #contact .heading h2 {
     color: #d82c2e;
@@ -579,18 +550,40 @@ footer i:hover {
     border-radius: 15px;
 }
 
+.button1{
+    color: #fff;
+    background-color: #d82c2e;
+    border-radius: 10px;
+    height: 50px;
+    box-shadow: 20px 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+.button1:hover{
+    font-size: 30px;
+    height: 50px;
+}
+
+
 
 /*MAP*/
 
 #map{
-    height: 400px;
-    width: 100%;
+    height: 600px;
+    width: 50%;
+    margin-right: 50px;
+    box-shadow: 20px 30px 60px 0 rgba(0,0,0,0.3);
 }
 
 
 /*MEDIA QUERIES */
 
 @media(max-width: 768px) {
+
+
+    /*HOME*/
+    .title{
+        font-size: 30px;
+    }
 
     /*ABOUT*/
     #about {
@@ -610,6 +603,12 @@ footer i:hover {
 
 
     /*TIMELINE*/
+
+    #experience .heading h1 {
+        
+        font-size: 30px;
+    }
+
     ul.timeline:before {
         left: 40px;
     }
@@ -642,6 +641,16 @@ footer i:hover {
         border-right-width: 14px;
         left: -14px;
         right: auto;
+    }
+
+    /*Media Contact*/
+    #contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #map{
+        width: 100%;
     }
 
 
