@@ -25,7 +25,7 @@ $(function(){
         $.ajax(
         {
             type: 'POST',
-            url: 'contact.php',
+            url: 'php/contact.php',
             data: postdata,
             dataType: 'json',
             success: function(result)
@@ -53,6 +53,8 @@ $(function(){
 
 });
 
+
+//map
 $(function(){
     var location = {lat: 49.2833, lng: 6.2};
 

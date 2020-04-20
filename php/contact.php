@@ -1,18 +1,19 @@
 <?php 
 
-    $tab = (["firstname"=> "", "name"=> "", "email"=> "", "phone"=> "", "message"=> "", 
-    "firstnameError"=> "", "nameError"=> "", "emailError"=> "", "phoneError"=> "", "messageError"=> "", "isSucess"=> false]);
+    $tab = array("firstname"=> "", "name"=> "", "email"=> "", "phone"=> "", "message"=> "", 
+    "firstnameError"=> "", "nameError"=> "", "emailError"=> "", "phoneError"=> "", "messageError"=> "", "isSuccess"=> false);
 
     $emailTo = "marc.reg083@gmail.com";
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        $tab['firstname'] = $_POST["firstname"];
-        $tab['name'] = $_POST["name"];
-        $tab['email'] = $_POST["email"];
-        $tab['phone'] = $_POST["phone"];
-        $tab['message'] = $_POST["message"];
+        $tab['firstname'] = verifyInput($_POST["firstname"]);
+        $tab['name'] =  verifyInput($_POST["name"]);
+        $tab['email'] =  verifyInput($_POST["email"]);
+        $tab['phone'] =  verifyInput($_POST["phone"]);
+        $tab['message'] =  verifyInput($_POST["message"]);
         $tab['isSuccess'] = true;
+        $emailText = "";
 
     if(empty($tab['firstname']))
     {
@@ -21,7 +22,7 @@
     }
     else
     {
-        $emailTo .= "Firstname: {$tab['firstname']}\n";
+        $emailText .= "Firstname: {$tab['firstname']}\n";
     }
 
     if(empty($tab['name']))
@@ -31,7 +32,7 @@
     }
     else
     {
-        $emailTo .= "Name: {$tab['name']}\n";
+        $emailText .= "Name: {$tab['name']}\n";
     }
 
     if(!isEmail($tab['email']))
@@ -41,7 +42,7 @@
     }
     else
     {
-        $emailTo .= "Email: {$tab['email']}\n";
+        $emailText .= "Email: {$tab['email']}\n";
     }
 
     if(!isPhone($tab['phone']))
@@ -51,7 +52,7 @@
     }
     else
     {
-        $emailTo .= "Téléphone: {$tab['phone']}\n";
+        $emailText .= "Téléphone: {$tab['phone']}\n";
     }
 
     if(empty($tab['message']))
@@ -61,24 +62,24 @@
     }
     else
     {
-        $emailTo .= "Message: {$tab['message']}\n";
+        $emailText .= "Message: {$tab['message']}\n";
     }
 
     if($isSuccess){
-        $headers = "FROM: {$tab['firstname']} {$tab['name']} <$email>\r\nReply-To: {$tab['email']}";
-        mail($emailTo, "Un message de votre site", $emailTo, $headers);
+        $headers = "FROM: {$tab['firstname']} {$tab['name']} <{$tab['email']}>\r\nReply-To: {$tab['email']}";
+        mail($emailTo, "Un message de votre site", $emailText, $headers);
     }
     echo json_encode($tab);
 }
-    function isPhone($var)
+    function isPhone($phone)
     {
-    return preg_match("/^[0-9]*$/", $var);
+    return preg_match("/^[0-9]*$/", $phone);
     }
 
 
-    function isEmail($var)
+    function isEmail($email)
     {
-        return filter_var($var, FILTER_VALIDATE_EMAIL);
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 
 
