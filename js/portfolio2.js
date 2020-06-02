@@ -16,39 +16,33 @@ $(function(){
 //CONTACT
 $(function(){
 
-    $('#contact-form').submit(function(e)
-    {
+    $('#contact-form').submit(function(e) {
         e.preventDefault();
-        $('comments').empty();
+        $('.comments').empty();
         var postdata = $('#contact-form').serialize();
-
-        $.ajax(
-        {
+        
+        $.ajax({
             type: 'POST',
             url: 'php/contact.php',
             data: postdata,
             dataType: 'json',
-            success: function(result)
-            {
-                if(result.isSuccess)
+            success: function(json) {
+                 
+                if(json.isSuccess) 
                 {
-                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé.</p>");
+                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
                     $('#contact-form')[0].reset();
                 }
                 else
                 {
-                    $('#fistname + .comments').html(result.firstnameError);
-                    $('#name + .comments').html(result.nameError);
-                    $('#email + .comments').html(result.emailError);
-                    $('#phone + .comments').html(result.phoneError);
-                    $('#message + .comments').html(result.messageError);
-                }
-
+                    $('#firstname + .comments').html(json.firstnameError);
+                    $('#name + .comments').html(json.nameError);
+                    $('#email + .comments').html(json.emailError);
+                    $('#phone + .comments').html(json.phoneError);
+                    $('#message + .comments').html(json.messageError);
+                }                
             }
-
-
         });
-
     });
 
 });

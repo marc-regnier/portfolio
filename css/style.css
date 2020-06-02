@@ -28,7 +28,6 @@ img {
     max-width: 100%;
     height: auto;
 
-
 }
 
 section {
@@ -39,6 +38,11 @@ section .heading {
     text-align: center;
     padding-bottom: 40px;
     padding-top: 30px;
+}
+
+.logo-img{
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -489,7 +493,7 @@ section .heading {
     color: #fff;
 }
 
-#portfolio p{
+#portfolio {
     text-align: center;
     color: #fff;
 }
@@ -501,8 +505,31 @@ section .heading {
     height: 100%;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
+    
 
 }
+
+.projet{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+.descr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    background: #fff;
+    color: #353535;
+    padding: 15px;
+    text-align: justify;
+}
+
+
+
 
 #portfolio .thumbnail img:hover {
     filter: none;
@@ -642,6 +669,22 @@ footer i:hover {
         border-right-width: 14px;
         left: -14px;
         right: auto;
+    }
+
+
+    /*PORTFOLIO*/
+
+    .projet{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .descr{
+        display: flex;
+        justify-content: center;
+        
+        
     }
 
     /*Media Contact*/
