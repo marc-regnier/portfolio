@@ -35,7 +35,7 @@
 
         if(!isEmail($array["email"])) 
         {
-            $array["emailError"] = "";
+            $array["emailError"] = "J'ai besoin de votre mail pour pouvoir vous contactez";
             $array["isSuccess"] = false; 
         } 
         else
@@ -77,10 +77,12 @@
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
+
     function isPhone($phone) 
     {
         return preg_match("/^[0-9 ]*$/",$phone);
     }
+
     function test_input($data) 
     {
       $data = trim($data);
