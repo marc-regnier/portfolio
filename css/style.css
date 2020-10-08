@@ -1,19 +1,9 @@
 /* general */
 
-@font-face {
-    font-family: 'cascadia_coderegular';
-    src: url('../font/cascadia-webfont.woff2') format('woff2'),
-         url('../font/cascadia-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 body {
-    font-family: 'cascadia_coderegular', Arial, Helvetica, sans-serif;
+    font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
     padding-top: 50px;
 }
-
 
 
 h1,
@@ -49,11 +39,14 @@ section .heading {
 /*HOME*/
 #home {
     background-image: url("../image/laptop.jpg");
-    min-height: 800px;
+    min-height: 900px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
 }
 
@@ -72,6 +65,7 @@ section .heading {
     letter-spacing: 10px;
     font-size: 50px;
     font-weight: bold;
+    
     
 
 }
@@ -502,7 +496,7 @@ section .heading {
 #portfolio .thumbnail img {
 
     width: 100%;
-    height: 100%;
+    height: 450px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     
@@ -591,7 +585,9 @@ footer i:hover {
     height: 50px;
 }
 
-
+.comments{
+    color: #d82c2e;
+}
 
 /*MAP*/
 
@@ -686,6 +682,8 @@ footer i:hover {
         
         
     }
+
+  
 
     /*Media Contact*/
     #contact{
